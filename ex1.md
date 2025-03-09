@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
     <title>Сайт</title>
 <body>
@@ -6,4 +6,4 @@
 <p> Це моя сторінка.
 <a href="google.com">Google</a>
 </body>
-</html>
+</html> -->
