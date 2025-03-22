@@ -1,24 +1,26 @@
-¿Qué es HTML semántico?
+# ¿Qué es HTML semántico?
 
-📌 Semántica significa significado. Las etiquetas semánticas ayudan a los navegadores y a las personas a comprender la estructura de una página web.
+📌 **Semántica** significa significado. Las etiquetas semánticas ayudan a los navegadores y las personas a comprender la estructura de la página.
 
-Etiquetas semánticas importantes
+## Etiquetas semánticas importantes
 
-📝 Ayudan a que el código sea más comprensible:
+📝 Hacen que el código sea más comprensible:
 
-Etiqueta	¿Qué significa?
-<header>	Encabezado del sitio (logotipo, menú, título)
-<nav>	Navegación (menú)
-<main>	Contenido principal
-<article>	Artículo o publicación independiente
-<section>	Sección del sitio
-<aside>	Barra lateral (información adicional)
-<footer>	Pie de página (contactos, redes sociales)
+| Etiqueta     | ¿Qué significa?                          |
+|-------------|----------------------------------------|
+| `<header>`  | Encabezado del sitio (logo, menú, título) |
+| `<nav>`     | Navegación (menú)                      |
+| `<main>`    | Contenido principal                    |
+| `<article>` | Artículo o publicación individual       |
+| `<section>` | Sección del sitio                      |
+| `<aside>`   | Barra lateral (información adicional)  |
+| `<footer>`  | Pie de página (contactos, redes sociales) |
 
-<div> es una etiqueta no semántica. Un lector de pantalla no podrá entender su propósito.
+`<div>` es universal, pero **no es semántico**. Un lector de pantalla no entenderá su significado.
 
-Ejemplo de código:
+### Ejemplo de código:
 
+```html
 <header>
   <h1>Mi blog</h1>
 </header>
@@ -37,118 +39,139 @@ Ejemplo de código:
 <footer>
   <p>&copy; 2024. Todos los derechos reservados.</p>
 </footer>
+```
 
-❓ ¿Qué sucede si reemplazamos todo con <div>?
+❓ **¿Qué pasa si reemplazamos `<div>` en todas partes?**
 
-❌ Mal ejemplo:
+❌ **Mal ejemplo:**
 
+```html
 <div>Menú</div>
 <div>Título principal</div>
 <div>Texto principal</div>
+```
 
-✅ Buen código semántico:
+✅ **Buen código semántico:**
 
+```html
 <nav>Menú</nav>
 <h1>Título principal</h1>
 <p>Texto principal</p>
+```
 
-Atributos de HTML
+## Atributos HTML
 
 Un atributo proporciona información adicional sobre una etiqueta.
 
-Atributo	Descripción
-alt	Descripción de la imagen para personas con discapacidad visual o en caso de error de carga.
-title	Muestra un mensaje emergente al pasar el cursor.
+| Atributo  | Descripción |
+|-----------|----------------------------------------------------|
+| `alt`     | Descripción de la imagen para personas con discapacidad visual o en caso de error de carga. |
+| `title`   | Sugerencia emergente al pasar el cursor. |
 
 Ejemplos:
 
-<img src="photo.jpg" alt="Foto del sol">
+```html
+<img src="foto.jpg" alt="Foto del sol">
 <a href="#" title="¡Haz clic aquí!">Clic</a>
+```
 
-Importancia del código accesible
+## Importancia de un código accesible
 
-👀 ¿Por qué es importante?
+👀 **¿Por qué es importante?**
 
-Las personas con discapacidades visuales o motoras deben poder acceder al sitio web.
+Las personas con discapacidades visuales u otras limitaciones deben poder usar el sitio web.
 
-🔹 Principios básicos de accesibilidad:
+🔹 **Principales reglas de accesibilidad:**
 
-✅ Usa alt para las imágenes.
-✅ Agrega colores contrastantes para mejorar la legibilidad.
-✅ Usa títulos claros con <h1> - <h6>.
-✅ Asegúrate de que el sitio sea navegable con el teclado (sin ratón).
+✅ Usa `alt` para las imágenes.  
+✅ Agrega colores contrastantes para mejorar la legibilidad.  
+✅ Usa encabezados claros `<h1>` - `<h6>`.  
+✅ Permite la navegación con teclado (sin mouse).  
 
-📌 Ejemplo:
+📌 **Ejemplo:**
 
-❌ Mal código:
+❌ **Incorrecto:**
 
-<img src="dog.jpg">
+```html
+<img src="perro.jpg">
+```
 
-✅ Buen código:
+✅ **Correcto:**
 
-<img src="dog.jpg" alt="Un lindo perro negro mirando a la cámara">
+```html
+<img src="perro.jpg" alt="Un lindo perro negro mirando a la cámara">
+```
 
-Ejercicios prácticos 🎲
+## Ejercicios prácticos 🎲
 
-❓ ¿Qué sucede si una persona no puede ver la imagen?
-El navegador no podrá “ver” la imagen, pero podrá leer el texto alternativo en alt. Si alt falta, la persona perderá información importante.
+❓ **¿Qué pasa si una persona no puede ver la imagen?**  
+El navegador no podrá "ver" la imagen, pero podrá leer el texto en `alt`. Si `alt` falta, la persona perderá información importante.
 
-¿Cómo comprobar la accesibilidad de tu sitio web?
+## ¿Cómo comprobar la accesibilidad de tu sitio?
 
-✅ Usa un lector de pantalla.
-✅ Usa herramientas de accesibilidad en el navegador.
-✅ Verifica si el sitio es funcional sin ratón (usando la tecla Tab).
-✅ Usa texto con buen contraste para facilitar la lectura.
+✅ Usar un lector de pantalla.  
+✅ Usar herramientas de accesibilidad del navegador.  
+✅ Probar si el sitio funciona sin mouse (usando `Tab`).  
+✅ Usar texto contrastante para que sea legible para personas con problemas visuales.  
 
-¿Qué pasa si el navegador no puede cargar CSS?
+## ¿Qué pasa si el navegador no carga CSS?
 
-Si CSS no se carga, el sitio se verá como texto sin estilos.
+Si CSS no se carga, el sitio se mostrará como texto sin estilos.
 
-📌 Ejemplo sin CSS:
-	•	🔹 Si se usaron etiquetas semánticas (h1, p, nav, article), el texto seguirá estando estructurado.
-	•	🔹 Si solo se usó <div>, todo el texto aparecerá como un solo bloque y será difícil de entender.
+📌 **Ejemplo sin CSS:**
 
-💡 Conclusión: ¡El HTML semántico es útil incluso sin CSS!
+- 🔹 **Si se usaron etiquetas semánticas** (`h1`, `p`, `nav`, `article`), el texto seguirá estructurado.  
+- 🔹 **Si solo se usó `<div>`**, el texto quedará en un solo bloque, dificultando la comprensión de la página.  
 
-Listas (ul, ol, dl)
+💡 **Conclusión:** HTML semántico ayuda incluso sin CSS.
 
-📌 ¿Qué son las listas y para qué sirven?
-Las listas ayudan a organizar la información.
+## Listas (`ul`, `ol`, `dl`)
 
-🔹 Tipos de listas:
+📌 **¿Qué son las listas y para qué sirven?**
+Las listas ayudan a estructurar información.
 
-✔ Lista desordenada (ul) – cuando el orden no es importante.
-✔ Lista ordenada (ol) – cuando el orden sí es importante.
-✔ Lista de definiciones (dl) – cuando se necesita explicar términos.
+🔹 **Tipos de listas:**
 
-❌ Mal ejemplo (sin lista):
+✔ **Lista no ordenada (`ul`)** – cuando el orden no importa.  
+✔ **Lista ordenada (`ol`)** – cuando el orden es importante.  
+✔ **Lista de definiciones (`dl`)** – para explicar términos.  
 
+❌ **Mal ejemplo (sin lista)**
+
+```html
 <p class="intro">Frutas: manzana, plátano, naranja</p>
+```
 
-✅ Buen ejemplo (lista desordenada ul):
+✅ **Bien (lista no ordenada `ul`)**
 
+```html
 <ul>
   <li>Manzana</li>
   <li>Plátano</li>
   <li>Naranja</li>
 </ul>
+```
 
-✅ Buen ejemplo (lista ordenada ol):
+✅ **Bien (lista ordenada `ol`)**
 
+```html
 <ol>
   <li>Abrir el navegador</li>
   <li>Ir a Google</li>
-  <li>Escribir la consulta</li>
+  <li>Escribir la búsqueda</li>
 </ol>
+```
 
-✅ Lista de definiciones dl:
+✅ **Lista de definiciones `dl`**
 
+```html
 <dl>
   <dt>HTML</dt>
   <dd>Lenguaje de marcado para crear páginas web</dd>
   <dt>CSS</dt>
   <dd>Lenguaje de estilos para diseñar páginas web</dd>
 </dl>
+```
 
-💡 Conclusión:
-El HTML semántico mejora la accesibilidad, hace que el código sea más comprensible, ayuda a los motores de búsqueda y facilita el mantenimiento del proyecto.
+💡 **Conclusión:**  
+HTML semántico mejora la accesibilidad, facilita la comprensión del código, ayuda a los motores de búsqueda y simplifica el mantenimiento del proyecto.
