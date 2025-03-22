@@ -1,177 +1,177 @@
-# Что такое семантический HTML?
+# ¿Qué es HTML semántico?
 
-📌 **Семантика** означает смысл. Семантические теги помогают браузеру и людям понимать структуру страницы.
+📌 **Semántica** significa significado. Las etiquetas semánticas ayudan a los navegadores y las personas a comprender la estructura de la página.
 
-## Важные семантические теги
+## Etiquetas semánticas importantes
 
-📝 Они помогают сделать код понятным:
+📝 Hacen que el código sea más comprensible:
 
-| Тег         | Что он означает?                          |
-|------------|----------------------------------------|
-| `<header>` | Шапка сайта (логотип, меню, заголовок) |
-| `<nav>`    | Навигация (меню)                      |
-| `<main>`   | Основной контент                      |
-| `<article>`| Отдельная статья или пост             |
-| `<section>`| Раздел сайта                          |
-| `<aside>`  | Боковая панель (дополнительная информация) |
-| `<footer>` | Подвал сайта (контакты, соцсети)      |
+| Etiqueta     | ¿Qué significa?                          |
+|-------------|----------------------------------------|
+| `<header>`  | Encabezado del sitio (logo, menú, título) |
+| `<nav>`     | Navegación (menú)                      |
+| `<main>`    | Contenido principal                    |
+| `<article>` | Artículo o publicación individual       |
+| `<section>` | Sección del sitio                      |
+| `<aside>`   | Barra lateral (información adicional)  |
+| `<footer>`  | Pie de página (contactos, redes sociales) |
 
-`<div>` – универсальный, но **не семантический** тег. Читалка для слабовидящих не сможет понять его смысл.
+`<div>` es universal, pero **no es semántico**. Un lector de pantalla no entenderá su significado.
 
-### Пример кода:
+### Ejemplo de código:
 
 ```html
 <header>
-  <h1>Мой блог</h1>
+  <h1>Mi blog</h1>
 </header>
 <nav>
   <ul>
-    <li><a href="#">Главная</a></li>
-    <li><a href="#">Обо мне</a></li>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Sobre mí</a></li>
   </ul>
 </nav>
 <main>
   <article>
-    <h2>Первая статья</h2>
-    <p>Это мой первый пост.</p>
+    <h2>Primer artículo</h2>
+    <p>Esta es mi primera publicación.</p>
   </article>
 </main>
 <footer>
-  <p>&copy; 2024. Все права защищены.</p>
+  <p>&copy; 2024. Todos los derechos reservados.</p>
 </footer>
 ```
 
-❓ **Что будет, если заменить `<div>` везде?**
+❓ **¿Qué pasa si reemplazamos `<div>` en todas partes?**
 
-❌ **Плохой пример:**
-
-```html
-<div>Меню</div>
-<div>Главный заголовок</div>
-<div>Основной текст</div>
-```
-
-✅ **Хороший семантический код:**
+❌ **Mal ejemplo:**
 
 ```html
-<nav>Меню</nav>
-<h1>Главный заголовок</h1>
-<p>Основной текст</p>
+<div>Menú</div>
+<div>Título principal</div>
+<div>Texto principal</div>
 ```
 
-## Атрибуты HTML
-
-Атрибут – это дополнительная информация о теге.
-
-| Атрибут | Описание |
-|---------|----------------------------------------------------|
-| `alt`   | Описание изображения для слабовидящих и случаев, когда картинка не загружается. |
-| `title` | Подсказка при наведении. |
-
-Примеры:
+✅ **Buen código semántico:**
 
 ```html
-<img src="photo.jpg" alt="Фото солнца">
-<a href="#" title="Нажми здесь!">Клик</a>
+<nav>Menú</nav>
+<h1>Título principal</h1>
+<p>Texto principal</p>
 ```
 
-## Важность доступного кода
+## Atributos HTML
 
-👀 **Почему это важно?**
+Un atributo proporciona información adicional sobre una etiqueta.
 
-Люди с нарушениями зрения или ограниченными возможностями должны иметь возможность пользоваться сайтом.
+| Atributo  | Descripción |
+|-----------|----------------------------------------------------|
+| `alt`     | Descripción de la imagen para personas con discapacidad visual o en caso de error de carga. |
+| `title`   | Sugerencia emergente al pasar el cursor. |
 
-🔹 **Основные принципы доступности:**
-
-✅ Используй `alt` для картинок.  
-✅ Добавляй контрастные цвета для читаемости.  
-✅ Используй понятные заголовки `<h1>` - `<h6>`.  
-✅ Сделай сайт удобным для навигации с клавиатуры (без мышки).  
-
-📌 **Пример:**
-
-❌ **Плохо:**
+Ejemplos:
 
 ```html
-<img src="dog.jpg">
+<img src="foto.jpg" alt="Foto del sol">
+<a href="#" title="¡Haz clic aquí!">Clic</a>
 ```
 
-✅ **Хорошо:**
+## Importancia de un código accesible
+
+👀 **¿Por qué es importante?**
+
+Las personas con discapacidades visuales u otras limitaciones deben poder usar el sitio web.
+
+🔹 **Principales reglas de accesibilidad:**
+
+✅ Usa `alt` para las imágenes.  
+✅ Agrega colores contrastantes para mejorar la legibilidad.  
+✅ Usa encabezados claros `<h1>` - `<h6>`.  
+✅ Permite la navegación con teclado (sin mouse).  
+
+📌 **Ejemplo:**
+
+❌ **Incorrecto:**
 
 ```html
-<img src="dog.jpg" alt="Милый черный пес смотрит в камеру">
+<img src="perro.jpg">
 ```
 
-## Практические упражнения 🎲
-
-❓ **Что случится, если человек не видит картинку?**  
-Браузер не сможет “увидеть” изображение, но сможет прочитать текстовое описание в `alt`. Если `alt` отсутствует, человек потеряет важную информацию.
-
-## Как проверить доступность своего сайта?
-
-✅ Использовать экранный диктор.  
-✅ Использовать инструменты доступности в браузере.  
-✅ Проверить, можно ли пользоваться сайтом без мышки (переключаться клавишей `Tab`).  
-✅ Использовать контрастный текст, чтобы его могли читать люди с нарушением зрения.  
-
-## Что будет, если браузер не сможет загрузить CSS?
-
-Если CSS не загрузится, сайт будет выглядеть как обычный текст без стилей.
-
-📌 **Пример без CSS:**
-
-- 🔹 **Если использовались семантические теги** (`h1`, `p`, `nav`, `article`), текст останется структурированным.  
-- 🔹 **Если использовался только `<div>`**, весь текст сольется в один блок, и пользователю будет сложно понять страницу.
-
-💡 **Вывод:** Семантический HTML помогает даже без CSS!
-
-## Списки (`ul`, `ol`, `dl`)
-
-📌 **Что такое списки и зачем они нужны?**
-Списки помогают структурировать информацию.
-
-🔹 **Виды списков:**
-
-✔ **Маркированный список (`ul`)** – если порядок не важен.  
-✔ **Нумерованный список (`ol`)** – если порядок важен.  
-✔ **Список определений (`dl`)** – если нужно объяснить термины.  
-
-❌ **Плохо (без списка)**
+✅ **Correcto:**
 
 ```html
-<p class="intro">Фрукты: яблоко, банан, апельсин</p>
+<img src="perro.jpg" alt="Un lindo perro negro mirando a la cámara">
 ```
 
-✅ **Хорошо (маркированный список `ul`)**
+## Ejercicios prácticos 🎲
+
+❓ **¿Qué pasa si una persona no puede ver la imagen?**  
+El navegador no podrá "ver" la imagen, pero podrá leer el texto en `alt`. Si `alt` falta, la persona perderá información importante.
+
+## ¿Cómo comprobar la accesibilidad de tu sitio?
+
+✅ Usar un lector de pantalla.  
+✅ Usar herramientas de accesibilidad del navegador.  
+✅ Probar si el sitio funciona sin mouse (usando `Tab`).  
+✅ Usar texto contrastante para que sea legible para personas con problemas visuales.  
+
+## ¿Qué pasa si el navegador no carga CSS?
+
+Si CSS no se carga, el sitio se mostrará como texto sin estilos.
+
+📌 **Ejemplo sin CSS:**
+
+- 🔹 **Si se usaron etiquetas semánticas** (`h1`, `p`, `nav`, `article`), el texto seguirá estructurado.  
+- 🔹 **Si solo se usó `<div>`**, el texto quedará en un solo bloque, dificultando la comprensión de la página.  
+
+💡 **Conclusión:** HTML semántico ayuda incluso sin CSS.
+
+## Listas (`ul`, `ol`, `dl`)
+
+📌 **¿Qué son las listas y para qué sirven?**
+Las listas ayudan a estructurar información.
+
+🔹 **Tipos de listas:**
+
+✔ **Lista no ordenada (`ul`)** – cuando el orden no importa.  
+✔ **Lista ordenada (`ol`)** – cuando el orden es importante.  
+✔ **Lista de definiciones (`dl`)** – para explicar términos.  
+
+❌ **Mal ejemplo (sin lista)**
+
+```html
+<p class="intro">Frutas: manzana, plátano, naranja</p>
+```
+
+✅ **Bien (lista no ordenada `ul`)**
 
 ```html
 <ul>
-  <li>Яблоко</li>
-  <li>Банан</li>
-  <li>Апельсин</li>
+  <li>Manzana</li>
+  <li>Plátano</li>
+  <li>Naranja</li>
 </ul>
 ```
 
-✅ **Хорошо (нумерованный список `ol`)**
+✅ **Bien (lista ordenada `ol`)**
 
 ```html
 <ol>
-  <li>Открыть браузер</li>
-  <li>Зайти в Google</li>
-  <li>Ввести запрос</li>
+  <li>Abrir el navegador</li>
+  <li>Ir a Google</li>
+  <li>Escribir la búsqueda</li>
 </ol>
 ```
 
-✅ **Список определений `dl`**
+✅ **Lista de definiciones `dl`**
 
 ```html
 <dl>
   <dt>HTML</dt>
-  <dd>Язык разметки для создания веб-страниц</dd>
+  <dd>Lenguaje de marcado para crear páginas web</dd>
   <dt>CSS</dt>
-  <dd>Язык стилей для оформления страниц</dd>
+  <dd>Lenguaje de estilos para diseñar páginas web</dd>
 </dl>
 ```
 
-💡 **Вывод:**  
-Семантический HTML улучшает доступность, делает код понятным, помогает поисковым системам и облегчает поддержку проекта.
+💡 **Conclusión:**  
+HTML semántico mejora la accesibilidad, facilita la comprensión del código, ayuda a los motores de búsqueda y simplifica el mantenimiento del proyecto.
