@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Сайт</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        /* Основний стиль у Minecraft-тематиці */
+        body {
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #3b3b3b;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background-color: #4f772d;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #8f5e1e;
+        }
+        
+        nav {
+            background-color: #8f5e1e;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 3px solid #4f772d;
+        }
+        
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border: 2px solid #4f772d;
+            background-color: #3b3b3b;
+            font-size: 0.8em;
+        }
+        
+        nav a:hover {
+            background-color: #4f772d;
+            color: #ffff00;
+        }
+        
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #222;
+            border: 4px solid #8f5e1e;
+            flex: 1;
+        }
+        
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #3b3b3b;
+            border: 3px solid #8f5e1e;
+        }
+        
+        footer {
+            background-color: #4f772d;
+            text-align: center;
+            padding: 15px;
+            border-top: 4px solid #8f5e1e;
+            margin-top: auto;
+        }
+        
+        h1, h2, h3 {
+            color: #ffcc00;
+        }
+        
+        .block {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            border: 2px solid #000;
+        }
+        
+        .grass {
+            background-color: #3a9d23;
+        }
+        
+        .dirt {
+            background-color: #8b5a2b;
+        }
+        
+        .stone {
+            background-color: #7f7f7f;
+        }
+        
+        .crafting-table {
+            background-color: #8b4513;
+            position: relative;
+        }
+        
+        .crafting-table::before {
+            content: "+";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 4px solid #8f5e1e;
+            margin: 10px 0;
+        }
+        
+        .minecraft-img {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+        }
+        
+        .blocks-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .recipe {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .recipe-arrow {
+            font-size: 24px;
+            margin: 0 15px;
+            color: #ffcc00;
+        }
+        
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⛏️ Вітаємо у Minecraft Світі! ⛏️</h1>
+        <p>Сайт про гру Minecraft та програмування</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Головна</a>
+        <a href="#blocks">Блоки</a>
+        <a href="#crafting">Крафтинг</a>
+        <a href="#coding">Програмування</a>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <h2>Ласкаво просимо!</h2>
+            <p>Цей сайт створений для вивчення HTML та CSS у стилі гри Minecraft.</p>
+            <p>Minecraft - це пісочниця з відкритим світом, де ви можете будувати, досліджувати та творити!</p>
+            
+            <img src="1minecraft.jpg" alt="Minecraft Landscape" class="minecraft-img">
+            
+            <div class="blocks-container">
+                <div class="block grass" title="Трава"></div>
+                <div class="block dirt" title="Земля"></div>
+                <div class="block stone" title="Камінь"></div>
+                <div class="block crafting-table" title="Верстак"></div>
+            </div>
+        </section>
+        
+        <section id="blocks">
+            <h2>Основні блоки</h2>
+            
+            <article>
+                <h3>Трава</h3>
+                <p>Зелений блок з коричневими крапками. Росте на поверхні світу.</p>
+                <div class="block grass"></div>
+            </article>
+            
+            <article>
+                <h3>Земля</h3>
+                <p>Коричневий блок. Використовується для будівництва та садівництва.</p>
+                <div class="block dirt"></div>
+            </article>
+            
+            <article>
+                <h3>Камінь</h3>
+                <p>Сірий блок. Основа для багатьох рецептів крафтингу.</p>
+                <div class="block stone"></div>
+            </article>
+        </section>
+        
+        <section id="crafting">
+            <h2>Крафтинг</h2>
+            <p>Крафтинг - це процес створення нових предметів з існуючих.</p>
+            <p>Наприклад, щоб зробити верстак, вам потрібно:</p>
+            
+            <div class="recipe">
+                <div class="block dirt"></div>
+                <div class="block dirt"></div>
+                <div class="block dirt"></div>
+                <div class="block dirt"></div>
+                <span class="recipe-arrow">→</span>
+                <div class="block crafting-table"></div>
+            </div>
+            
+        </section>
+        
+        <section id="coding">
+            <h2>Програмування в Minecraft</h2>
+            <p>Minecraft можна модифікувати за допомогою коду:</p>
+            <ul>
+                <li>Команди в грі</li>
+                <li>Моди на Java</li>
+                <li>Скрипти на Python</li>
+                <li>Веб-сайти (як цей!) про Minecraft</li>
+            </ul>
+            
+            <img src="minecraft2.jpg" alt="Coding in Minecraft" class="minecraft-img">
+              
+            
+            <p>HTML та CSS - це основи веб-програмування, які ви можете вивчати, створюючи сайти у стилі Minecraft!</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2023 Minecraft Навчальний Сайт | Створено з ❤️ та ⛏️</p>
+        <p>Вивчайте програмування разом з Minecraft!</p>
+    </footer>
+</body>
+</html>
